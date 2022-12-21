@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import './App.css'
 import FormUsers from './components/FormUsers'
 import { useState } from 'react'
+import UserCard from './components/UserCard'
 
 
 
@@ -53,6 +54,15 @@ function App() {
      <h1>Hola mundo</h1>
      
      <FormUsers createUser={createUser}/>
+    {
+      users?.map(user => (
+        
+       < UserCard  key={user.id} user={user}/>
+       
+       ))
+
+    }
+
     </div>
   )
 }
