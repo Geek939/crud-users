@@ -2,19 +2,23 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import './App.css'
 import FormUsers from './components/FormUsers'
+import { useState } from 'react'
 
 
 
 const BASE_URL = "https://users-crud.academlo.tech/swagger/?format=openapi"
 
 function App() {
-  
+  const [users, setUsers] = useState()
+
+
+
   // funcion que obtine todos los usuarios
   const getAllUsers = () =>{
     const URL = `${BASE_URL}users/`
     axios.get(URL)
       
-      .then (res => console.log (res.data))
+      .then (res => setUsers (res.data))
       .catch (err => console.log (err))
   }
 
