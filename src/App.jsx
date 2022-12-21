@@ -13,6 +13,7 @@ function App() {
   const getAllUsers = () =>{
     const URL = `${BASE_URL}users/`
     axios.get(URL)
+      
       .then (res => console.log (res.data))
       .catch (err => console.log (err))
   }
@@ -22,7 +23,12 @@ function App() {
   const createUser = () => {
     const URL = `${BASE_URL}users/`
     axios.post (URL, data)
-    .then (res=> console.log (res.data))
+    .then (res=> {
+  
+    console.log (res.data)
+    getAllUsers()
+  
+  })
     .catch(err=> console.log (err) )
 
   }
