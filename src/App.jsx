@@ -7,9 +7,11 @@ import UserCard from './components/UserCard'
 
 
 
-const BASE_URL = "https://users-crud.academlo.tech/swagger/?format=openapi"
+const BASE_URL = "https://users-crud.academlo.tech/"
 
 function App() {
+
+  //estado para almacenar los usuarios y poder mostrarlos
   const [users, setUsers] = useState()
 
 
@@ -29,10 +31,8 @@ function App() {
     const URL = `${BASE_URL}users/`
     axios.post (URL, data)
     .then (res=> {
-  
     console.log (res.data)
     getAllUsers()
-  
   })
     .catch(err=> console.log (err) )
 
@@ -56,9 +56,7 @@ function App() {
      <FormUsers createUser={createUser}/>
     {
       users?.map(user => (
-        
        < UserCard  key={user.id} user={user}/>
-       
        ))
 
     }
