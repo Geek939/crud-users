@@ -27,7 +27,7 @@ function App() {
 
 
   //funcion para crear un usuario
-  const createUser = () => {
+  const createUser = (data) => {
     const URL = `${BASE_URL}users/`
     axios.post (URL, data)
     .then (res=> {

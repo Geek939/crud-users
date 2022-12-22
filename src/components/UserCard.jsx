@@ -12,7 +12,6 @@ return (
         <ul>
             <li><span>Email</span>{user.email}</li>
             <li><span>Birthday</span>{user.birthday}</li>
-            <li><span></span></li>
         </ul>
         <i className='bx bx-trash'></i>
         <i className='bx bxs-edit-alt'></i>

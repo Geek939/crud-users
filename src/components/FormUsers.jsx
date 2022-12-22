@@ -7,8 +7,8 @@ const FormUsers = ({createUser}) => {
   
   const submitForm = (data) => {
 
-    console.log(data);
-  }
+    createUser (data)
+   }
   
   
     return (
