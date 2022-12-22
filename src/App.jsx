@@ -13,8 +13,10 @@ function App() {
 
   //estado para almacenar los usuarios y poder mostrarlos
   const [users, setUsers] = useState()
+  const [userUpdate, setUserUpdate] = useState()
 
 
+console.log(userUpdate)
 
   // funcion que obtine todos los usuarios
   const getAllUsers = () =>{
@@ -38,6 +40,16 @@ function App() {
 
   }
 
+  //funcion para elimiinar un usuario
+
+  const deleteUser = (id) => {
+    const URL =`${BASE_URL}users/${id}`
+    axios.delete(URL)
+    .then(res=> {
+      console.log(res.data)
+      getAllUsers()} )
+    .catch(err=> console.log(err))
+  }
 
 
   //se obtienen todos los usuarios al cargar la aplicacion 
@@ -51,12 +63,16 @@ function App() {
   return (
     <div className="App">
      
-     <h1>Hola mundo</h1>
+     <h1>Crud Users</h1>
      
-      <FormUsers createUser={createUser}/>
+      <FormUsers createUser={createUser} userUpdate={userUpdate}/>
     {
       users?.map(user => (
-       < UserCard  key={user.id} user={user}/>
+       < UserCard  
+        key={user.id}
+        user={user}
+        deleteUser={deleteUser}
+        setUserUpdate={setUserUpdate}/>
        ))
 
     }

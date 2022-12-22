@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserCard = ({user}) => {
+const UserCard = ({user, deleteUser, setUserUpdate}) => {
   
   console.log(user)
 
@@ -13,8 +13,8 @@ return (
             <li><span>Email</span>{user.email}</li>
             <li><span>Birthday</span>{user.birthday}</li>
         </ul>
-        <i className='bx bx-trash'></i>
-        <i className='bx bxs-edit-alt'></i>
+        <i onClick={()=>deleteUser(user.id)} className='bx bx-trash'></i>
+        <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt'></i>
         
     </article>
   )

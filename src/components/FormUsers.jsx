@@ -1,15 +1,21 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
-const FormUsers = ({createUser}) => {
+const FormUsers = ({createUser , userUpdate}) => {
   
-  const {handleSubmit,register} = useForm()
+  const {handleSubmit,register, reset} = useForm()
   
   const submitForm = (data) => {
 
     createUser (data)
    }
   
+   useEffect(()=>{
+   if (userUpdate){
+    reset(userUpdate)
+   }
+   },[userUpdate])
+
   
     return (
     <form onSubmit={handleSubmit (submitForm)}>
