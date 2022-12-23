@@ -73,7 +73,7 @@ console.log(userUpdate)
 
 
   return (
-    <div className="App bg-gray-500 min-w-full  pt-10">
+    <div className="App pt-10">
      
      <section className='text-lg  font-medium flex justify-center items-center flex-col gap-5'>
      <h1 className='text-3xl'>Crud Users</h1>
