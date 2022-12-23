@@ -51,6 +51,16 @@ console.log(userUpdate)
     .catch(err=> console.log(err))
   }
 
+  const updateUser = (id,data) => {
+    const URL = `${BASE_URL}users/${id}`
+    axios.patch(URL, data)
+    .then(res => {console.log(res.data)
+    getAllUsers()
+     
+  })
+    .catch(err=>console.log(err))
+  }
+
 
   //se obtienen todos los usuarios al cargar la aplicacion 
   useEffect(() => {
@@ -72,7 +82,8 @@ console.log(userUpdate)
         key={user.id}
         user={user}
         deleteUser={deleteUser}
-        setUserUpdate={setUserUpdate}/>
+        setUserUpdate={setUserUpdate}
+        updateUser={updateUser}/>
        ))
 
     }
