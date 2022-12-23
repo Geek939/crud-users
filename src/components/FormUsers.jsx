@@ -19,9 +19,11 @@ const FormUsers = ({createUser , userUpdate, updateUser}) => {
   
   const submitForm = (data) => {
 
-    if(userUpdate){
-      updateUser (userUpdate.id, data)
-    }else{
+    if(userUpdate) {
+
+      updateUser(userUpdate.id, data)
+    }
+    else{
     createUser(data)
     }
 

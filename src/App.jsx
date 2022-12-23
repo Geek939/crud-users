@@ -52,11 +52,11 @@ console.log(userUpdate)
   }
 
   const updateUser = (id,data) => {
-    const URL = `${BASE_URL}users/${id}`
+    const URL =`${BASE_URL}users/${id}`
     axios.patch(URL, data)
     .then(res => {console.log(res.data)
     getAllUsers()
-     
+    setUserUpdate()
   })
     .catch(err=>console.log(err))
   }
