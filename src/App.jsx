@@ -51,12 +51,14 @@ console.log(userUpdate)
     .catch(err=> console.log(err))
   }
 
-  const updateUser = (id,data) => {
+  const updateUser = (id, data) => {
     const URL =`${BASE_URL}users/${id}`
-    axios.patch(URL, data)
-    .then(res => {console.log(res.data)
-    getAllUsers()
-    setUserUpdate()
+    
+    axios.patch (URL, data)
+    .then(res => {
+      console.log(res.data)
+      getAllUsers()
+      setUserUpdate()
   })
     .catch(err=>console.log(err))
   }
@@ -84,7 +86,8 @@ console.log(userUpdate)
         user={user}
         deleteUser={deleteUser}
         setUserUpdate={setUserUpdate}
-        updateUser={updateUser}/>
+        updateUser={updateUser}
+        />
        ))
 
     }
