@@ -38,34 +38,34 @@ const FormUsers = ({createUser , userUpdate, updateUser}) => {
 
   
     return (
-    <form onSubmit={handleSubmit (submitForm)}>
-      <h2>{userUpdate? "Edite User" : "New user"}</h2>
-        <div>
-        <label htmlFor="">Email</label>
-        <input type="email" {...register ("email")} />
+    <form className='flex flex-col gap-3 items-center' onSubmit={handleSubmit (submitForm)}>
+      <h2 className='text-center font-normal'>{userUpdate? "Edite User" : "New user"}</h2>
+        <div className='bg mt-5'>
+        <label className='pr-3' htmlFor="">Email</label>
+        <input className='border border-black' type="email" {...register ("email")} />
         </div>
 
         <div>
-        <label htmlFor="">Password</label>
-        <input type="password" {...register ("password")}/>
+        <label className='pr-3'  htmlFor="">Password</label>
+        <input className='border border-black' type="password" {...register ("password")}/>
         </div>
 
         <div>
-        <label htmlFor="">First Name</label>
-        <input type="text" {...register ("first_name")}/>
+        <label className='pr-3'  htmlFor="">First Name</label>
+        <input className='border border-black' type="text" {...register ("first_name")}/>
         </div>
 
         <div>
-        <label htmlFor="">Last Name</label>
-        <input type="text" {...register ("last_name")} />
+        <label className='pr-3'  htmlFor="">Last Name</label>
+        <input className='border border-black' type="text" {...register ("last_name")} />
         </div>
 
         <div>
-        <label htmlFor="">Birthday</label>
-        <input type="date" {...register ("birthday")} />
+        <label className='pr-3'  htmlFor="">Birthday</label>
+        <input className='border border-black' type="date" {...register ("birthday")} />
         </div>
 
-        <button>{userUpdate?  "Edit User" : "Add new user"}</button>
+        <button className='border border-blue-900  bg-slate-600'>{userUpdate?  "Edit User" : "Add new user"}</button>
     </form>
   )
 }

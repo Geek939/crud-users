@@ -8,14 +8,15 @@ return (
     
     <article>
         
-        <h2>{`${user.first_name} ${user.last_name}`}</h2>
-        <ul>
-            <li><span>Email</span>{user.email}</li>
-            <li><span>Birthday</span>{user.birthday}</li>
+        <h2 className='text-center'>{`${user.first_name} ${user.last_name}`}</h2>
+        <ul className='flex flex-col gap-2 border border-black'>
+            <li className='flex gap-3'><span>Email:</span>{user.email}</li>
+            <li className='flex gap-3'><span>Birthday</span>{user.birthday}</li>
         </ul>
-        <i onClick={()=>deleteUser(user.id)} className='bx bx-trash'></i>
-        <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt'></i>
-        
+       <div className='flex gap-5 justify-center items-center pt-5'>
+        <i onClick={()=>deleteUser(user.id)} className='bx bx-trash bg-red-500'></i>
+        <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt bg-green-800'></i>
+        </div>
     </article>
   )
 }
