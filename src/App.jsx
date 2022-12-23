@@ -43,7 +43,7 @@ console.log(userUpdate)
   //funcion para elimiinar un usuario
 
   const deleteUser = (id) => {
-    const URL =`${BASE_URL}users/${id}`
+    const URL =`${BASE_URL}users/${id}/`
     axios.delete(URL)
     .then(res=> {
       console.log(res.data)
@@ -52,7 +52,7 @@ console.log(userUpdate)
   }
 
   const updateUser = (id, data) => {
-    const URL =`${BASE_URL}users/${id}`
+    const URL =`${BASE_URL}users/${id}/`
     
     axios.patch (URL, data)
     .then(res => {
