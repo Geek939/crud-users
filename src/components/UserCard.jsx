@@ -13,9 +13,9 @@ return (
             <li className='flex gap-3'><span>Email:</span>{user.email}</li>
             <li className='flex gap-3'><span>Birthday</span>{user.birthday}</li>
         </ul>
-       <div className='flex gap-5 justify-center items-center pt-5'>
+       <div className='flex gap-5 justify-center items-center pt-5 pb-10'>
         <i onClick={()=>deleteUser(user.id)} className='bx bx-trash bg-red-500'></i>
-        <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt bg-green-800'></i>
+        <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt bg-green-700'></i>
         </div>
     </article>
   )

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
 
@@ -20,7 +19,6 @@ const FormUsers = ({createUser , userUpdate, updateUser}) => {
   const submitForm = (data) => {
 
     if(userUpdate) {
-
       updateUser(userUpdate.id, data)
     }
     else{
