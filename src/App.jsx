@@ -73,7 +73,8 @@ console.log(userUpdate)
   return (
     <div className="App">
      
-     <h1>Crud Users</h1>
+     <section className='text-lg  font-medium flex justify-center items-center flex-col gap-5'>
+     <h1 className='text-3xl'>Crud Users</h1>
      
       <FormUsers createUser={createUser} userUpdate={userUpdate}/>
     {
@@ -87,7 +88,7 @@ console.log(userUpdate)
        ))
 
     }
-
+    </section>  
     </div>
   )
 }
