@@ -71,7 +71,7 @@ console.log(userUpdate)
 
 
   return (
-    <div className="App">
+    <div className="App bg-gray-400 ">
      
      <section className='text-lg  font-medium flex justify-center items-center flex-col gap-5'>
      <h1 className='text-3xl'>Crud Users</h1>
