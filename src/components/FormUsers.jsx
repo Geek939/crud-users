@@ -62,8 +62,9 @@ const FormUsers = ({createUser , userUpdate, updateUser}) => {
         <label className='pr-3'  htmlFor="">Birthday</label>
         <input className='border border-black' type="date" {...register ("birthday")} />
         </div>
-
-        <button className='border border-blue-900  bg-slate-600'>{userUpdate?  "Edit User" : "Add new user"}</button>
+         <div className=' h-9 w-36 bg-black text-center pt-1 text-white text-base rounded-lg transform hover:scale-110 duration-500'>
+        <button className=''>{userUpdate?  "Edit User" : "Add new user"}</button>
+        </div>
     </form>
   )
 }
