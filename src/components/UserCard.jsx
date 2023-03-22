@@ -13,8 +13,8 @@ return (
             <li className='flex gap-3'><span>Email:</span>{user.email}</li>
             <li className='flex gap-3'><span>Birthday</span>{user.birthday}</li>
         </ul>
-       <div className='flex gap-5 justify-center items-center pt-5'>
-        <i onClick={()=>deleteUser(user.id)} className='bx bx-trash bg-red-500'></i>
+       <div className='flex gap-5 justify-center items-center pt-5 cursor-pointer hover:transform hover:scale-125 transition duration-500'>
+        <i  onClick={()=>deleteUser(user.id)} className='bx bx-trash bg-red-500'></i>
         <i onClick={()=>setUserUpdate (user)} className='bx bxs-edit-alt bg-green-700'></i>
         </div>
     </article>

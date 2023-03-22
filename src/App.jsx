@@ -73,9 +73,9 @@ console.log(userUpdate)
 
 
   return (
-    <div className="App pt-10">
+    
      
-     <section className='text-lg  font-medium flex justify-center items-center flex-col gap-5'>
+     <section className=' text-lg  font-medium flex justify-center items-center flex-col gap-5 bg-gradient-to-r from-black  to-green-700  text-black h-screen'>
      <h1 className='text-3xl'>Crud Users</h1>
      
       <FormUsers createUser={createUser} userUpdate={userUpdate} updateUser={updateUser}/>
@@ -92,7 +92,7 @@ console.log(userUpdate)
 
     }
     </section>  
-    </div>
+    
   )
 }
 
